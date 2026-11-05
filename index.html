@@ -185,15 +185,7 @@ h2{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;letter-spacing:-.03em;fon
 .tl-detail h3{font-size:1.35rem;letter-spacing:-.02em;margin-bottom:8px}
 .tl-detail p{color:var(--muted);margin-bottom:16px;max-width:620px}
 
-/* CERTS / ACHIEVEMENTS */
-.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.cert{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
-.cert-img{aspect-ratio:4/3;border:1px dashed var(--line2);border-radius:8px;display:grid;place-items:center;text-align:center;font:400 10px/1.5 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;overflow:hidden}
-.cert-img img{width:100%;height:100%;object-fit:cover}
-.cert h3{font-size:1.1rem;line-height:1.3;margin-bottom:4px}
-.cert .by{font-size:13px;color:var(--muted);margin-bottom:12px}
-.cert a,.cert .ph{font:400 12px var(--mono)}
-.cert a{color:var(--accent)}
+/* ACHIEVEMENTS */
 .ph{color:var(--muted);font-style:italic}
 .ach{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px}
 .ach li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
@@ -234,7 +226,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 @media (max-width:900px){
   .about-grid,.resume,.card-grid{grid-template-columns:1fr}
   .card-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:24px}
-  .grid-2,.certs,.ach{grid-template-columns:1fr}
+  .grid-2,.ach{grid-template-columns:1fr}
   .venn{max-width:380px;margin-inline:auto}
 }
 @media (max-width:1000px){
@@ -259,8 +251,6 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   .tl button{flex-direction:row;text-align:left;gap:16px;padding:4px 0}
   .tl .tl-t{font-size:15px}
   .tl-detail{grid-template-columns:1fr;gap:10px}
-  .cert{grid-template-columns:1fr}
-  .cert-img{max-width:220px}
   .ach li{grid-template-columns:1fr;gap:2px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -389,23 +379,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   </div>
 </section>
 
-<!-- ============ CERTIFICATIONS ============ -->
-<section id="certifications" class="section" aria-labelledby="cert-h">
-  <div class="wrap">
-    <header class="sh reveal">
-      <p class="eyebrow mono">05 / Certifications</p>
-      <h2 id="cert-h">Certified in CAD</h2>
-      <div class="rule"></div>
-    </header>
-    <div class="certs" id="certs"></div>
-  </div>
-</section>
-
 <!-- ============ ACHIEVEMENTS ============ -->
 <section id="achievements" class="section" aria-labelledby="ach-h">
   <div class="wrap">
     <header class="sh reveal">
-      <p class="eyebrow mono">06 / Achievements</p>
+      <p class="eyebrow mono">05 / Achievements</p>
       <h2 id="ach-h">Competitions and credentials</h2>
       <div class="rule"></div>
     </header>
@@ -417,7 +395,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 <section id="toolbox" class="section" aria-labelledby="tool-h">
   <div class="wrap">
     <header class="sh reveal">
-      <p class="eyebrow mono">07 / Engineering toolbox</p>
+      <p class="eyebrow mono">06 / Engineering toolbox</p>
       <h2 id="tool-h">Tools I use day to day</h2>
       <div class="rule"></div>
     </header>
@@ -429,9 +407,9 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 <section id="resume" class="section" aria-labelledby="resume-h">
   <div class="wrap resume">
     <div class="reveal">
-      <p class="eyebrow mono">08 / Resume</p>
+      <p class="eyebrow mono">07 / Resume</p>
       <h2 id="resume-h">Everything in one document</h2>
-      <p>A summary of my projects, skills, and certifications.</p>
+      <p>A summary of my projects, skills, and experience.</p>
       <div class="cta">
         <a class="btn primary" data-resume data-view target="_blank" rel="noopener" href="#resume">View Resume</a>
         <a class="btn" data-resume data-download href="#resume">Download Resume</a>
@@ -449,7 +427,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="section contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <p class="eyebrow mono reveal">09 / Contact</p>
+    <p class="eyebrow mono reveal">08 / Contact</p>
     <h2 id="contact-h" class="reveal">Let's build something useful.</h2>
     <p class="sub reveal" style="max-width:520px">If you're working on robotics, mechanical design, or automation, I'd like to hear about it.</p>
     <div class="contact-list" id="contact-list"></div>
@@ -484,7 +462,7 @@ const CONFIG = {
   accent: "amber",
   accents: {
     amber:  { label: "Amber",        hex: "#e8a23a" },
-    wine:   { label: "Wine",         hex: "#b32573" },   // lighter tint of the shirt colour (#5d2b44) so it reads on the dark background
+    wine:   { label: "Wine (shirt)", hex: "#d16199" },   // lighter tint of the shirt colour (#5d2b44) so it reads on the dark background
     cyan:   { label: "Cyan",         hex: "#38bdf8" },
     green:  { label: "Green",        hex: "#4ade80" },
     violet: { label: "Violet",       hex: "#a78bfa" }
@@ -540,11 +518,6 @@ const CONFIG = {
     { rev: "D", title: "ROS2 &amp; Robot Modeling", text: "Working with ROS2: robot modeling, TF2 frames, and RViz visualization.", tags: ["ROS2", "TF2", "RViz"] },
     { rev: "E", title: "Computer Vision &amp; Autonomous Systems", text: "Perception with OpenCV and YOLO, alongside navigation, SLAM, and localization.", tags: ["OpenCV", "YOLO", "SLAM"] },
     { rev: "F", title: "Software &amp; Telemetry Projects", text: "Software-focused builds, including telemetry and monitoring tools.", tags: ["Software", "Telemetry"] }
-  ],
-
-  certifications: [
-    { title: "SOLIDWORKS Design Professional (CSWP)", issuer: "Dassault Systèmes", image: "", verifyUrl: "" },
-    { title: "DraftSight Certification",              issuer: "Dassault Systèmes", image: "", verifyUrl: "" }
   ],
 
   achievements: [
@@ -670,16 +643,6 @@ function setStep(i) {
 let touched = false;
 tl.addEventListener("click", e => { const b = e.target.closest("button"); if (b) { touched = true; setStep(+b.dataset.i); } });
 setStep(0);
-
-/* --- Certifications --- */
-$("#certs").innerHTML = CONFIG.certifications.map((c, i) => `
-  <div class="panel spot cert reveal" style="--i:${i}">
-    <div class="cert-img">${c.image ? `<img src="${c.image}" alt="${c.title} certificate" loading="lazy">` : "Certificate<br>image"}</div>
-    <div>
-      <h3>${c.title}</h3><p class="by">${c.issuer}</p>
-      ${c.verifyUrl ? `<a href="${c.verifyUrl}" target="_blank" rel="noopener">Verify credential ↗</a>` : `<span class="ph">Verification link: not added yet</span>`}
-    </div>
-  </div>`).join("");
 
 /* --- Achievements --- */
 $("#ach").innerHTML = CONFIG.achievements.map((a, i) => `
